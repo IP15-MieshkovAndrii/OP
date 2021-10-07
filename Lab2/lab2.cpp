@@ -8,7 +8,7 @@ int main ()
     float y; //результат
     cout << "Введіть x:";
     cin >> x;
-    cout << "Введіть в:";
+    cout << "Введіть a:";
     cin >> a;
     
     if(x<0) y=x;
