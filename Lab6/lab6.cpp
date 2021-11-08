@@ -2,13 +2,13 @@
 #include <cmath>
 #include <iomanip>
 using namespace std;
-float eps;
-const float PI=3.141592653589793;
+long double eps;
+const long double PI=3.141592653589793;
 
 
-int fact(int f)
+unsigned long long int fact(unsigned long long int f)
 {
-    float FACT=1;
+    unsigned long long int FACT=1;
     int m;
     for(m=1; m <= f; m++){
         FACT*=m;
@@ -16,12 +16,12 @@ int fact(int f)
     return FACT;
 }
 
-float Cos(float x)
+long double Cos(long double x)
 {
-    int i;
-    float sum;
-    float prevsum;
-    float rad;
+    unsigned long long int i;
+    long double sum;
+    long double prevsum;
+    long double rad;
 
     if (x>360){
         while (x>360){
@@ -43,7 +43,7 @@ float Cos(float x)
     i=1;
     while (fabs(sum-prevsum) > eps){
         prevsum=sum;
-        sum = sum + pow(-1,i) * pow(rad, i*2)/fact(i*2);
+        sum = sum + pow(-1,i) * pow(rad, i*2)/float(fact(i*2));
         i++;
     }
     return sum;
@@ -54,8 +54,8 @@ int main ()
 {
     //setlocale(LC_ALL, ".Ukrainian");
 
-    float a, b;
-    float y;
+    long double a, b;
+    long double y;
     cout << "a:";
     cin >> a;
 
@@ -67,7 +67,7 @@ int main ()
 
     y=Cos(a) + Cos(b) * Cos(b) + Cos(a+b);
     
-    int countAfterPoint = log10(1/eps) + 2;
+    int countAfterPoint = log10(1/eps) + 1;
 
     cout << setprecision(countAfterPoint)<< "y = " << y << endl;
 }
