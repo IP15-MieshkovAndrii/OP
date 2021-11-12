@@ -2,13 +2,10 @@
 #include <cmath>
 #include <iomanip>
 using namespace std;
-long double eps;
-const long double PI=3.141592653589793;
 
-
-unsigned long long int fact(unsigned long long int f)
+long long int fact(long long int f)
 {
-    unsigned long long int FACT=1;
+    long long int FACT=1;
     int m;
     for(m=1; m <= f; m++){
         FACT*=m;
@@ -16,9 +13,9 @@ unsigned long long int fact(unsigned long long int f)
     return FACT;
 }
 
-long double Cos(long double x)
+long double Cos(long double x, long double eps1)
 {
-    unsigned long long int i;
+    long long int i;
     long double sum;
     long double prevsum;
     long double rad;
@@ -37,11 +34,11 @@ long double Cos(long double x)
         }
     }
     }
-    rad=PI/180*x;
+    rad=M_PI/180*x;
     sum=1;
     prevsum=0;
     i=1;
-    while (fabs(sum-prevsum) > eps){
+    while (fabs(sum-prevsum) > eps1){
         prevsum=sum;
         sum = sum + pow(-1,i) * pow(rad, i*2)/float(fact(i*2));
         i++;
@@ -56,6 +53,9 @@ int main ()
 
     long double a, b;
     long double y;
+    long double eps;
+    
+    
     cout << "a:";
     cin >> a;
 
@@ -64,10 +64,12 @@ int main ()
 
     cout << "The result will be calculated with accuracy: ";
     cin >> eps;
-
-    y=Cos(a) + Cos(b) * Cos(b) + Cos(a+b);
     
-    int countAfterPoint = log10(1/eps) + 1;
+
+    y=Cos(a,eps) + Cos(b,eps) * Cos(b,eps) + Cos(a+b,eps);
+    
+    int countAfterPoint = log10(1/eps) + 2;
 
     cout << setprecision(countAfterPoint)<< "y = " << y << endl;
+    
 }

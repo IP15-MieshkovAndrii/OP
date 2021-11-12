@@ -29,6 +29,7 @@ def Cos(x):
 a = float(input("a:"))
 b = float(input("b:"))
 eps = float(input("The result will be calculated with accuracy:"))
+
 y = Cos(a) + Cos(b) * Cos(b) + Cos(a+b)
 countAfterPoint = int(math.log((1/eps), 10))
 print(f'y = {round(y, countAfterPoint)}')
