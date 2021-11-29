@@ -23,6 +23,7 @@ int main(){
     cout<< "B: ";output_b(b, n);
     less_z(b, n, z);
     max(b, n);
+    delete [] b;
 }
 
 void input_b(double arr[], int m){
