@@ -61,14 +61,14 @@ void max(double arr[], int m)
     for (int i=0; i<m; i++){
         if(arr[i]>max){
             max=arr[i];
-            j=i+1;
+            j=i;
         }
     }
     cout << "Maximum array value = " << max << endl;
     cout << "Maximum element index = "<< j <<endl<<endl;
     e=arr[0];
-    arr[0]=arr[j-1];
-    arr[j-1]=e;
+    arr[0]=arr[j];
+    arr[j]=e;
     cout<<"B: ";
     for (int i=0; i<m; i++){
         cout<<arr[i] << " ";
