@@ -14,7 +14,7 @@ void new_arr(double arr[], int n, int j);
 
 int main(){
     int n;
-    int z, l;
+    int z;
     int j;
     cout << "Size of array B, n = " ;
     cin >> n;
@@ -63,7 +63,6 @@ int max(double arr[], int m, int x)
 {
     double max=-100;
     int j;
-    
     for (int i=0; i<m; i++){
         if(arr[i]>max && arr[i]<x){
             max=arr[i];
@@ -74,6 +73,7 @@ int max(double arr[], int m, int x)
     cout << "Maximum element index = "<< j <<endl<<endl;
     return j;
 }
+
 void new_arr(double arr[], int n, int j){
     double e;
     e=arr[0];
