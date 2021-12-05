@@ -192,7 +192,7 @@ void new_matr(Matrix matr1, Matrix matr2, int n, int m, int max_c, int min_c, in
 }
 
 /*Максимальне першої матриці на мінімальне другої
- та мінімальне другої матриці на максимальне другої*/
+ та мінімальне першої матриці на максимальне другої*/
 //typedef double Matrix[10][10];
 //Matrix C, B;
 //void input_before(Matrix, int, int);
