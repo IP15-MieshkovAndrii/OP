@@ -26,18 +26,19 @@ int main(){
     cout<< "B: ";output_b(b, n);
     if(z>0){
         cout << "Number of elements in array B less than z = " << less_z(b, n, z) << endl<<endl;
+        j = max(b, n, z);
+        new_arr(b, n, j);
     }
     else{
         cout << "z must be natural"<<endl<< endl;
     };
     
-    j = max(b, n, z);
-    new_arr(b, n, j);
+
     delete [] b;
 }
 
 void input_b(double arr[], int m){
-    int range_min=-50, range_max=50, rang_double=3;
+    int range_min=-100, range_max=200, rang_double=3;
     srand(time(NULL));
     for (int i=0; i<m; i++){
         arr[i] = range_min + 1 + rand()%(range_max-range_min + 1) - (rand()%((int)pow(10,rang_double)) / pow(10,rang_double));
