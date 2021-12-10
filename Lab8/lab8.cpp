@@ -1,3 +1,4 @@
+//Варіант 22
 #include <iomanip>
 #include <iostream>
 #include <cstdlib>
