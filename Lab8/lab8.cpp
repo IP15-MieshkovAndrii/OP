@@ -57,6 +57,7 @@ void input_before(Matrix matr, int l, int k){
         }
     }
 }
+
 void output_before(Matrix matr, int l, int k){
     for (int i=0; i<l; i++){
         for (int j=0; j<k; j++){
