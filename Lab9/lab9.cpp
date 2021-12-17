@@ -1,4 +1,5 @@
-//22 варіант
+//22 варіант(краще працює з латиницею)
+
 #include <cstring>
 #include <iostream>
 #include <cstdio>
@@ -14,7 +15,7 @@ int main() {
 //    SetConsoleOutputCP(1251);
     int j=0;
     char s[100];
-    cout<<"Enter row: ";
+    cout<<"Введіть рядок: ";
     cin.getline(s,100);
     char delims[] = " ";
     char *tok;
