@@ -1,3 +1,4 @@
+#22 варіант(додаткові бали)
 s = input("Input string: ")
 x = s.find(" ")
 i = 0
@@ -17,6 +18,6 @@ while i < len(s):
         k = k + 1
 
        
-print('Number of palindrome:', k)
+print('Number of palindromes:', k)
 
         
